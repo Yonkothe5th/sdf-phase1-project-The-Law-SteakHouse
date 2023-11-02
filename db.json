@@ -4,26 +4,26 @@
         "id": 1,
         "name": "Uliza Upewe",
         "description": "250 Grams of an exquisite,roasted porksteak coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
-        "image":"url"
+        "image":"https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937448/DSC_0108-2_1_cx6afx.png"
         },
 
         {
         "id": 2,
         "title": "Bento Box Meal",
         "description": "400 Grams of a delicious roasted rack of pork ribs coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
-        "image": "url"
+        "image": "https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937393/DSC_0104-2_tm8gos.png"
         },
         {
         "id": 3,
         "name": "Bazenga Box Meal",
         "description": "500 Grams of finely roasted pork ribs coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
-        "image": "url"
+        "image": "https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937537/DSC_0110-3_ad2wxk.png"
         }
 
     ],
     "suggestions": [
         {
-            "suggestion1": "After applying the rub let the meat rest for 30 min to allow the flavours to penetrate",
+            "suggestion1":  "After applying the rub let the meat rest for 30 min to allow the flavours to penetrate",
             "suggestion2": "allow the meat to marinate ideally overnight to ensure flavours soak into the meat",
             "suggestion3": "Turn the meat every 20 min over heat to ensure an even roast",
             "suggestion4": "after applying the basting sauce leave on heat for 7 minutes to allow the sauce to caramelize over the meat"
