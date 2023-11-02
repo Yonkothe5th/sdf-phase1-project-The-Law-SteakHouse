@@ -4,6 +4,7 @@
         "id": 1,
         "name": "Uliza Upewe",
         "description": "250 Grams of an exquisite,roasted porksteak coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
+        "price":"ksh 850",
         "image":"https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937448/DSC_0108-2_1_cx6afx.png"
         },
 
@@ -11,12 +12,14 @@
         "id": 2,
         "title": "Bento Box Meal",
         "description": "400 Grams of a delicious roasted rack of pork ribs coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
+        "price":"ksh 850",
         "image": "https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937393/DSC_0104-2_tm8gos.png"
         },
         {
         "id": 3,
         "name": "Bazenga Box Meal",
         "description": "500 Grams of finely roasted pork ribs coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
+        "price":"ksh 850",
         "image": "https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937537/DSC_0110-3_ad2wxk.png"
         }
 
