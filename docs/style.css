@@ -1,13 +1,137 @@
 body {
-
 background-color:#1C1C1C;
+box-sizing: 0;
+}
 
+h1 {
+    font-family: 'Ewert',sans-serif;
+    font-size: x-large;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #a71313; 
+    color: #f8f8ff;
+}
+
+
+h2 {
+    font-family: 'Ewert',sans-serif;
+    font-size: x-large;
+    text-align: center;
+    font-size: 50px;
+    text-shadow: 2px 2px 4px #a71313; 
+    color: #f8f8ff;
+}
+
+#welcomepgimg{
+    object-fit: auto;
+    height: 500px;
+    position: relative;
+    margin-top: 300px ;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%); 
+    width: 1200px;
+    height: 600px ;
+}
+
+#wlcmpglogo {
+    z-index: 1;
+    position: absolute;
+    top: 50%; 
+    left: 50%; 
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+
+#menu {
+    width: 90%;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;  
+    font-family:'Shadows Into Light', cursive;
+    font-size: 20px;
+}
+
+#substituteimgone {
+    width :400px;
+}
+
+#substituteimgtwo {
+    width :400px;
+}
+
+#substituteimgthree{
+        width: 400px;
+}
+#staff{
+    display: flex ;
+    width: 90% ;
+    justify-content:center ;
+    gap: 200px ;
+    align-items: center;
+    font-size: 20px;
+    font-family:'Shadows Into Light', cursive;
+}
+
+#head-chef , #sous-chef {
+    border-radius :30%;
+    width: 300px;
+}
+
+
+.profile-header h3, .quote p {
+    display: flex;
+    justify-content: center;
+}
+
+.social-icons img {
+    margin-left: 40px;
+}
+
+
+form {
+    width: 450px;
+    margin: 0 auto 50px auto;
+}
+
+textarea {
+    display: block;
+    width: 100%;
+    height: 100px;
+    border: 1px solid gray;
+    padding: 5px;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+form button[type="submit"] {
+    border: none;
+    font-size: 16px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: #bd2612;
+    color: #201818;
+    padding: 7px 10px;
+    cursor: pointer;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
+}
+
+#suggestion-list li {
+    background-color: #db4b13;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 20px;
 }
 
 p {
-    color: #f8f8ff ;
+    color: #ece4e4 ;
 }
 
 h3 {
-    color: #f8f8ff ;
-}
+    color: #acacb3cd ;
+} 
