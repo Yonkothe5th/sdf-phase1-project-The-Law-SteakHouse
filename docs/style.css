@@ -127,7 +127,11 @@ form button[type="submit"] {
     font-family: 'Shadows Into Light', cursive;
     font-size: 20px;
 }
-
+label {
+    font-family: 'Shadows Into Light', cursive;
+    font-size: 16px;
+    color: #f8f8ff;
+}
 p {
     color: #ece4e4 ;
 }
