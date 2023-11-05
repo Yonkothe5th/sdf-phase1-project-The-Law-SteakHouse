@@ -1,46 +1,44 @@
 {
-    "meals": [
-        {
-        "id": 1,
-        "name": "Uliza Upewe",
-        "description": "250 Grams of an exquisite,roasted porksteak coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
-        "price":"ksh 500",
-        "image":"https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937448/DSC_0108-2_1_cx6afx.png"
-        },
+  "meals": [
+    {
+      "id": 1,
+      "name": "Uliza Upewe",
+      "description": "250 Grams of an exquisite,roasted porksteak coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
+      "price": "ksh 500",
+      "image": "https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937448/DSC_0108-2_1_cx6afx.png"
+    },
+    {
+      "id": 2,
+      "name": "Bento Box Meal",
+      "description": "400 Grams of a delicious roasted rack of pork ribs coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
+      "price": "ksh 650",
+      "image": "https://res.cloudinary.com/dqlzpvicb/image/upload/v1699030591/DSC_0106_e4zg2q.png"
+    },
+    {
+      "id": 3,
+      "name": "Bazenga Box Meal",
+      "description": "500 Grams of finely roasted pork ribs coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
+      "price": "ksh 950",
+      "image": "https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937537/DSC_0110-3_ad2wxk.png"
+    }
+  ],
+  "suggestions": [
+    {
+      "id": 1,
+      "suggestion": "After applying the rub let the meat rest for 30 min to allow the flavours to penetrate"
+    },
+    {
+      "id": 2,
+      "suggestion": "While on the grill flip the meat every 20 min to allow to cook evenly"
+    },
+    {
+      "id": 3,
+      "suggestion": "baste the meat with sauce and leave on the grill for upto 15 min to allow the sauce to caramelise"
+    },
+    {
+      "id": 4,
+      "suggestion": "Wrap In foil 20 min after placing on heat to allow appropriate distribution of heat "
+    }
 
-        {
-        "id": 2,
-        "name": "Bento Box Meal",
-        "description": "400 Grams of a delicious roasted rack of pork ribs coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
-        "price":"ksh 650",
-        "image": "https://res.cloudinary.com/dqlzpvicb/image/upload/v1699030591/DSC_0106_e4zg2q.png"
-        },
-        {
-        "id": 3,
-        "name": "Bazenga Box Meal",
-        "description": "500 Grams of finely roasted pork ribs coated with a delicious homemade sauce served with a side of Mexican fried rice and Kachumbari kando",
-        "price":"ksh 950",
-        "image": "https://res.cloudinary.com/dqlzpvicb/image/upload/v1698937537/DSC_0110-3_ad2wxk.png"
-        }
-    ],
-    
-    "suggestions":[
-        {
-        "id":1,
-        "suggestion":"After applying the rub let the meat rest for 30 min to allow the flavours to penetrate"  
-        },
-        {
-        "id":2,
-        "suggestion":"While on the grill flip the meat every 20 min to allow to cook evenly"  
-        },
-        {
-        "id":3,
-        "suggestion":"baste the meat with sauce and leave on the grill for upto 15 min to allow the sauce to caramelise"
-        },
-        {
-        "id":4,
-        "suggestion":"Wrap In foil 20 min after placing on heat to allow appropriate distribution of heat "
-        }
     ]
 }
-    
