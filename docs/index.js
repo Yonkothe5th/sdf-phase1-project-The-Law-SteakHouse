@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", function (){
     const suggestionsList = document.getElementById("suggestion-list")
 
 
+
     fetch(`${baseURL}/meals`)
     .then (resp => resp.json())
     .then(data => {
@@ -52,23 +53,57 @@ document.addEventListener("DOMContentLoaded", function (){
         <p 
         id = 'price of the third meal'>${data[2].price}
         </p>`
-
-
-        function generateReviewList(suggestions) {
-            let suggestionsList = '';
-            for (let i = 0; i < suggestions.length; i++) {
-            suggestionsList += '<li data-index="' + i + '">' + suggestions[i] + '</li>';
-            }
-            return suggestionsList;
-        }
-        suggestionsList.innerHTML = '<ul id="suggestion-list">'
-        '<li>' + generateReviewList(data[3].suggestion)+'</li>'
-        '</ul>'
-
     })
 
+    // fetch(`${baseURL}/suggestions`)
+    // .then(resp => resp.json())
+    // .then(data => { 
+    //         console.log(data)
+    //         const li = document.querySelector('#first-suggestion')
+    //         li.textContent = (data[0].suggestion)
+    //     }
+    // )
 
+    // Function to fetch suggestions and populate them in an unordered list
+    function fetchAndPopulateSuggestions() {
+        fetch(`${baseURL}/suggestions`) // Replace with the actual URL of your server
+        .then(response => response.json())
+        .then(data => {
+            // const suggestionList = document.getElementById('suggestion-list'); // Assuming you have an <ul> with this ID
+            suggestionsList.innerHTML = ''; // Clear the existing list
 
+            data.forEach(suggestions =>{
+            const li = document.createElement('li');
+            li.textContent = suggestions.suggestion;
+            suggestionsList.appendChild(li);
+            });
+        })
+        .catch(error => {
+        console.error('Error fetching suggestions:', error);
+    });
+    }
+
+  // Call the function to fetch and populate suggestions
+    fetchAndPopulateSuggestions();
+
+        // suggestionsList.innerHTML = '<ul id="suggestion-list">'+
+        // '<li>' + populateSuggestionList(data) +'</li>'+
+        // '</ul>'
+    
+
+    
+    //     function populateSuggestionList (data) {
+    //         let suggestionsList = '';
+    //         for (let i = 0; i < suggestions.length; i++) {
+    //         suggestionsList += '<li data-index="' + i + '">' + suggestions[i] + '</li>';
+    //         }
+    //         return suggestionsList;
+    //     }
+    // )
+
+    //     suggestionsList.innerHTML = '<ul id="suggestion-list">'+
+    //     '<li>' + populateSuggestionList(data) +'</li>'+
+    //     '</ul>'
 })
 
 
