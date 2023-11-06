@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", function (){
     fetch(`${baseURL}/meals`)
     .then (resp => resp.json())
     .then(data => {
+        // use of inner HTML to populate the menu with items on the db.json
         menuItemOne.innerHTML = `'<h3 
         id="firstitem"><strong>${data[0].name}</strong>
         </h3>
