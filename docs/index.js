@@ -62,8 +62,20 @@ function fetchAndPopulateSuggestions() {
             data.forEach(suggestions => {
                 const li = document.createElement('li');
                 li.textContent = suggestions.suggestion;
+                li.addEventListener('click', function (event) {
+                    const target = event.target;
+                deleteSuggestion(suggestions.id)
+                li.remove();
+                    // if (target.tagName === 'LI') {
+                    //     const suggestionId = parseInt(target.getAttribute('data-suggestion-id'), 10);
+                    //     if (!isNaN(suggestionId)) {
+                    //         deleteSuggestion(suggestionId);
+                    //     }
+                    // }
+                });
                 suggestionList.appendChild(li);
             });
+            document.getElementById('suggestion-list')
         })
         .catch(error => {
             console.error('Error fetching suggestions:', error);
@@ -81,14 +93,6 @@ function addSuggestion(newSuggestion) {
             suggestion:newSuggestion
         }),
     })
-    // fetch(`${baseURL}/suggestions`)
-    //     .then(response => response.json())
-    //     .then(data => {
-    //             data.push({
-    //             id: data.length + 1,
-    //             suggestion: newSuggestion,
-    //         });
-
         .then(response => {
             if (response.ok) {
                 fetchAndPopulateSuggestions();
@@ -122,26 +126,21 @@ fetchAndPopulateSuggestions();
 
 // Function to delete a suggestion by ID
 function deleteSuggestion(suggestionId) {
-    fetch(`${baseURL}/suggestions`) // Fetch the existing suggestions
-        .then(response => response.json())
-        .then(data => {
-            const indexToDelete = data.findIndex(suggestion => suggestion.id === suggestionId);
+    return fetch(`${baseURL}/suggestions/${suggestionId}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+    })
+    // fetch(`${baseURL}/suggestions`) 
+    //     .then(response => response.json())
+    //     .then(data => {
+    //         const indexToDelete = data.findIndex(suggestion => suggestion.id === suggestionId);
 
-            if (indexToDelete !== -1) {
-                data.splice(indexToDelete, 1); 
+    //         if (indexToDelete !== -1) {
+    //             data.splice(indexToDelete, 1); 
 
                 
-                return fetch(`${baseURL}/suggestions`, {
-                    method: 'PUT',
-                    headers: {
-                        'Content-Type': 'application/json',
-                    },
-                    body: JSON.stringify(data),
-                });
-            } else {
-                console.error('Suggestion not found for deletion.');
-            }
-        })
         .then(response => {
             if (response.ok) {
                 console.log(`Suggestion with ID ${suggestionId} has been deleted.`);
@@ -156,16 +155,7 @@ function deleteSuggestion(suggestionId) {
 }
 
 // Event listener to handle suggestion deletion when an <li> element is clicked
-document.getElementById('suggestion-list').addEventListener('click', function (event) {
-    const target = event.target;
 
-    if (target.tagName === 'LI') {
-        const suggestionId = parseInt(target.getAttribute('data-suggestion-id'), 10);
-        if (!isNaN(suggestionId)) {
-            deleteSuggestion(suggestionId);
-        }
-    }
-});
 
 
 });

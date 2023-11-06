@@ -24,10 +24,6 @@
   ],
   "suggestions": [
     {
-      "id": 1,
-      "suggestion": "After applying the rub let the meat rest for 30 min to allow the flavours to penetrate"
-    },
-    {
       "id": 2,
       "suggestion": "While on the grill flip the meat every 20 min to allow to cook evenly"
     },
@@ -38,10 +34,6 @@
     {
       "id": 4,
       "suggestion": "Wrap In foil 20 min after placing on heat to allow appropriate distribution of heat "
-    },
-    {
-      "suggestion": "hello",
-      "id": 5
     }
   ]
 }
