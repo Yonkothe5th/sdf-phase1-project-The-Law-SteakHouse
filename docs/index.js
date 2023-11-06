@@ -12,7 +12,6 @@ document.addEventListener("DOMContentLoaded", function (){
     fetch(`${baseURL}/meals`)
     .then (resp => resp.json())
     .then(data => {
-        // use the data and innerHTML to populate the menu
         menuItemOne.innerHTML = `'<h3 
         id="firstitem"><strong>${data[0].name}</strong>
         </h3>
@@ -56,6 +55,7 @@ document.addEventListener("DOMContentLoaded", function (){
         </p>`
     });
     }
+    populateMenu();
     // function to fetch data from meals in the db.json file to pupulate the suggestions list
     function fetchAndPopulateSuggestions() {
         fetch(`${baseURL}/suggestions`) 
@@ -148,4 +148,5 @@ document.addEventListener("DOMContentLoaded", function (){
             console.error('Error deleting suggestion:', error);
         });
     }
+
 });

@@ -18,8 +18,7 @@ To run the project locally, follow these steps:
 
 1. Clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/yourusername/your-project.git
+git clone https://github.com/Yonkothe5th/sdf-phase1-project-The-Law-SteakHouse
 
 Certainly, here's a README file for the documents you provided, including the HTML file, JavaScript file, and JSON file:
 
@@ -45,8 +44,8 @@ To run the project locally, follow these steps:
 
 1. Clone this repository to your local machine:
 
-   ```bash
-   git clone https://github.com/YonkoThe5th/sdf-phase1-project-The-Law-Steakhouse.git
+
+git clone https://github.com/YonkoThe5th/sdf-phase1-project-The-Law-Steakhouse.git
 
 Open the index.html file in your web browser to view the website.
 
@@ -70,7 +69,7 @@ HTML
 JavaScript
 JSON for data storage
 Contact
-If you have any questions or need further assistance, you can reach out to [Your Name] at [your.email@example.com].
+If you have any questions or need further assistance, you can reach out to [Your Name] at [lawiochiel@gmail.com].
 
 Changelog
 
