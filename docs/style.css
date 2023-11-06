@@ -139,5 +139,8 @@ p {
 }
 
 h3 {
-    color: #acacb3cd ;
+    text-transform: uppercase;
+    font-size: 20px;
+    text-emphasis: bold;
+    color: #ece4e4 ;
 } 
