@@ -24,7 +24,7 @@ h2 {
 
 #welcomepgimg{
     object-fit: auto;
-    height: 500px;
+    max-height: 500px;
     position: relative;
     margin-top: 300px ;
     top: 50%; 
@@ -46,6 +46,7 @@ h2 {
 
 #menu {
     width: 90%;
+    margin: 0 auto;
     display:flex;
     justify-content: center;
     align-items: center;
@@ -67,6 +68,7 @@ h2 {
 }
 #staff{
     display: flex ;
+    margin: 0 auto;
     width: 90% ;
     justify-content:center ;
     gap: 200px ;
