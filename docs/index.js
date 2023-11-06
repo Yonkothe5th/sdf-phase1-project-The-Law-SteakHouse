@@ -4,10 +4,7 @@ document.addEventListener("DOMContentLoaded", function (){
     const menuItemOne = document.getElementById("itemone")
     const menuItemTwo = document.getElementById("itemtwo")
     const menuItemThree = document.getElementById("itemthree")
-    const suggestionsList = document.getElementById("suggestion-list")
-    const suggestionForm = document.getElementById('suggestion-form');
-
-
+    
     fetch(`${baseURL}/meals`)
     .then (resp => resp.json())
     .then(data => {
@@ -55,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function (){
         </p>`
     });
 
-    // Function to fetch suggestions and populate them in an unordered list
 function fetchAndPopulateSuggestions() {
     fetch(`${baseURL}/suggestions`) 
         .then(response => response.json())
@@ -74,24 +70,25 @@ function fetchAndPopulateSuggestions() {
         });
 }
 
-// Function to add a new suggestion
-function addSuggestion(newSuggestion) {
-    fetch(`${baseURL}/suggestions`)
-        .then(response => response.json())
-        .then(data => {
-            data.push({
-                id: data.length + 1,
-                suggestion: newSuggestion,
-            });
 
-            return fetch(`${baseURL}/suggestions`, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify(data),
-            });
-        })
+function addSuggestion(newSuggestion) {
+    return fetch(`${baseURL}/suggestions`, {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+            suggestion:newSuggestion
+        }),
+    })
+    // fetch(`${baseURL}/suggestions`)
+    //     .then(response => response.json())
+    //     .then(data => {
+    //             data.push({
+    //             id: data.length + 1,
+    //             suggestion: newSuggestion,
+    //         });
+
         .then(response => {
             if (response.ok) {
                 fetchAndPopulateSuggestions();
@@ -104,7 +101,7 @@ function addSuggestion(newSuggestion) {
         });
 }
 
-// Event listener for the form submission
+
 const suggestionsForm = document.getElementById('suggestions-form');
 suggestionsForm.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -120,6 +117,55 @@ suggestionsForm.addEventListener('submit', function (e) {
 
 // Call the function to fetch and populate suggestions on page load
 fetchAndPopulateSuggestions();
+
+
+
+// Function to delete a suggestion by ID
+function deleteSuggestion(suggestionId) {
+    fetch(`${baseURL}/suggestions`) // Fetch the existing suggestions
+        .then(response => response.json())
+        .then(data => {
+            const indexToDelete = data.findIndex(suggestion => suggestion.id === suggestionId);
+
+            if (indexToDelete !== -1) {
+                data.splice(indexToDelete, 1); 
+
+                
+                return fetch(`${baseURL}/suggestions`, {
+                    method: 'PUT',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data),
+                });
+            } else {
+                console.error('Suggestion not found for deletion.');
+            }
+        })
+        .then(response => {
+            if (response.ok) {
+                console.log(`Suggestion with ID ${suggestionId} has been deleted.`);
+                fetchAndPopulateSuggestions(); // Fetch and re-populate suggestions after deletion
+            } else {
+                console.error('Error updating the database:', response.status, response.statusText);
+            }
+        })
+        .catch(error => {
+            console.error('Error deleting suggestion:', error);
+        });
+}
+
+// Event listener to handle suggestion deletion when an <li> element is clicked
+document.getElementById('suggestion-list').addEventListener('click', function (event) {
+    const target = event.target;
+
+    if (target.tagName === 'LI') {
+        const suggestionId = parseInt(target.getAttribute('data-suggestion-id'), 10);
+        if (!isNaN(suggestionId)) {
+            deleteSuggestion(suggestionId);
+        }
+    }
+});
 
 
 });
